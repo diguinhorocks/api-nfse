@@ -1,0 +1,8 @@
+{
+	"require" : {
+		"respect/rest": "dev-master"
+	},
+	"autoload": {
+        "psr-4": {"Nf\\": "src/Nf/"}
+    }
+}
