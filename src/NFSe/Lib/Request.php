@@ -1,6 +1,6 @@
 <?php
 
-namespace Nf\Lib;
+namespace NFSe\Lib;
 
 class Request
 {
@@ -104,7 +104,7 @@ class Request
 		curl_setopt( $ch , CURLOPT_SSL_VERIFYPEER , false );
 		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
 		curl_setopt( $ch , CURLOPT_POST , 1 );
-		curl_setopt( $ch , CURLOPT_POSTFIELDS , http_build_query( $this->requestBody ) );
+		curl_setopt( $ch , CURLOPT_POSTFIELDS , $this->requestBody );
 
 		$this->responseBody = curl_exec($ch);
 		$this->responseInfo	= curl_getinfo($ch);
@@ -156,10 +156,6 @@ class Request
 		curl_setopt($curlHandle, CURLOPT_URL, $this->url);
 		curl_setopt($curlHandle, CURLOPT_FOLLOWLOCATION, 1);
 		curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, 1);
-
-		$headers = array(
-			0 => 'Content-Type: ' . $this->contentType
-		);
 
 		if (count($this->headers)) {
 
