@@ -133,29 +133,29 @@ class RPSCollector
 
 		$rpsCollectorData = $data;
 
-		$this->cpfcnpj				= $rpsCollectorData['cpfcnpj'];
-		$this->razsoc				= $rpsCollectorData['razsoc'];
-		$this->tipolog				= $rpsCollectorData['tipolog'];
-		$this->log					= $rpsCollectorData['log'];
-		$this->numend				= $rpsCollectorData['numend'];
-		$this->complend				= $rpsCollectorData['complend'];
-		$this->bairro				= $rpsCollectorData['bairro'];
-		$this->mun					= $rpsCollectorData['mun'];
-		$this->siglauf				= $rpsCollectorData['siglauf'];
-		$this->cep					= $rpsCollectorData['cep'];
-		$this->telefone 			= $rpsCollectorData['telefone'];
-		$this->email1				= $rpsCollectorData['email1'];
+		$this->cpfcnpj		= $rpsCollectorData['cpfcnpj'];
+		$this->razsoc		= $rpsCollectorData['razsoc'];
+		$this->tipolog		= $rpsCollectorData['tipolog'];
+		$this->log			= $rpsCollectorData['log'];
+		$this->numend		= $rpsCollectorData['numend'];
+		$this->complend		= $rpsCollectorData['complend'];
+		$this->bairro		= $rpsCollectorData['bairro'];
+		$this->mun			= $rpsCollectorData['mun'];
+		$this->siglauf		= $rpsCollectorData['siglauf'];
+		$this->cep			= $rpsCollectorData['cep'];
+		$this->telefone 	= $rpsCollectorData['telefone'];
+		$this->email1		= $rpsCollectorData['email1'];
 
 		if (isset($rpsCollectorData['inscricaomunicipal']) && !empty($rpsCollectorData['inscricaomunicipal'])) {
-		   $this->inscricaomunicipal   = $rpsCollectorData['inscricaomunicipal'];
+		   $this->inscricaomunicipal = $rpsCollectorData['inscricaomunicipal'];
 		}
 
 		if (isset($rpsCollectorData['email2']) && !empty($rpsCollectorData['email2'])) {
-		   $this->email2            = $rpsCollectorData['email2'];
+		   $this->email2 = $rpsCollectorData['email2'];
 		}
 
 		if (isset($rpsCollectorData['email3']) && !empty($rpsCollectorData['email3'])) {
-			$this->email3               = $rpsCollectorData['email3'];
+			$this->email3 = $rpsCollectorData['email3'];
 		}
 	}
 
