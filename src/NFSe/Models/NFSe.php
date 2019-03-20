@@ -106,7 +106,7 @@ class NFSe
 	    $this->contribuinte = $config['contribuinte']; 
 	    $this->tipotrib     = $config['tipotrib'];
 	    $this->dtadesn      = $config['dtadesn'];
-	    $this->alqisssn    = $config['alqisssn'];
+	    $this->alqisssn    	= $config['alqisssn'];
 	    $this->tpamb        = $config['tpamb'];
 	    $this->webservice   = $config['webservice'];
 
