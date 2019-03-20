@@ -1,10 +1,10 @@
 {
 	"require" : {
 		"respect/rest": "dev-master",
-		"nfephp-org/sped-nfse-etransparencia" : "dev-master",
+		"nfephp-org/sped-nfse-etransparencia" : "dev-master"
 	},
 	"autoload": {
-        "psr-4": {"Nf\\": "src/Nf/"}
+        "psr-4": {"NFSe\\": "src/NFSe/"}
     },
     "minimum-stability": "dev",
 	"prefer-stable": true
