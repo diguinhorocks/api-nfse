@@ -168,12 +168,12 @@ class NFSe
 			//adding tomador
 			$rps->addCollector($rpsCollector);
 
-			if (isset($data['nfse']['localPrestacao']) && count($data['localPrestacao'])) {
+			if (isset($data['nfse']['tomador']['localprestacao']) && count($data['nfse']['tomador']['localprestacao'])) {
 
 				$rpsServiceLocation = new RPSServiceLocation;
-				$rpsServiceLocation->build($data['nfse']['localPrestacao']);
+				$rpsServiceLocation->build($data['nfse']['tomador']['localprestacao']);
 				//adding tributo
-				$rps->addServiceLocation($rpsTax);
+				$rps->addServiceLocation($rpsServiceLocation);
 			}
 
 			//setting tributos
