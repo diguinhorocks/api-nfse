@@ -282,7 +282,7 @@ class Factory
             );
             $this->dom->addChild(
                 $this->rps,
-                "nfe:SiglaUFLocPre",
+                "nfe:SiglaUFLocpre",
                 !empty($loc->siglauf) ? $loc->siglauf : null,
                 false
             );
