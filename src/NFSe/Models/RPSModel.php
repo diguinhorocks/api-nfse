@@ -151,4 +151,20 @@ class RPSModel
 	{
 		$this->tributos[] = $tax;
 	}
+
+	/**
+	 * add a RPSLocation to a NFSe
+	 *
+	 * @param Models\RPSServiceLocation $rpsServiceLocation
+	 *
+	 * @return void
+	**/
+	private function addServiceLocation(RPSServiceLocation $rpsServiceLocation) {
+
+		if (property_exists($this->tomador, 'localprestacao')) {
+			$this->tomador->localprestacao = new \stdClass;
+		}
+
+		$this->tomador->localprestacao = $rpsServiceLocation;
+	}
 }

@@ -9,6 +9,7 @@ use NFePHP\NFSeTrans\Common\Soap\SoapFake;
 use NFSe\Lib\SoapWrapper;
 use NFePHP\NFSeTrans\Common\FakePretty;
 use NFSe\Models\RPSModel;
+use NFSe\Models\RPSServiceLocation;
 use NFSe\Lib\Validatr as v;
 
 class NFSe
@@ -166,6 +167,14 @@ class NFSe
 
 			//adding tomador
 			$rps->addCollector($rpsCollector);
+
+			if (isset($data['nfse']['localPrestacao']) && count($data['localPrestacao'])) {
+
+				$rpsServiceLocation = new RPSServiceLocation;
+				$rpsServiceLocation->build($data['nfse']['localPrestacao']);
+				//adding tributo
+				$rps->addServiceLocation($rpsTax);
+			}
 
 			//setting tributos
 			$taxes = [];
