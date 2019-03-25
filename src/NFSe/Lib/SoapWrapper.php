@@ -69,8 +69,6 @@ class SoapWrapper extends SoapBase implements SoapInterface
             file_put_contents($path . "/enviar-(". $date .").xml", $xml);
         }
 
-        
-
 	    return $response;
     }
 }

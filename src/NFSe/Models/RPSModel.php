@@ -159,7 +159,7 @@ class RPSModel
 	 *
 	 * @return void
 	**/
-	private function addServiceLocation(RPSServiceLocation $rpsServiceLocation) {
+	public function addServiceLocation(RPSServiceLocation $rpsServiceLocation) {
 
 		if (property_exists($this->tomador, 'localprestacao')) {
 			$this->tomador->localprestacao = new \stdClass;

@@ -168,7 +168,7 @@ class NFSe
 			//adding tomador
 			$rps->addCollector($rpsCollector);
 
-			if (isset($data['nfse']['tomador']['localprestacao']) && count($data['nfse']['tomador']['localprestacao'])) {
+			if (isset($data['nfse']['tomador']['localprestacao'])) {
 
 				$rpsServiceLocation = new RPSServiceLocation;
 				$rpsServiceLocation->build($data['nfse']['tomador']['localprestacao']);
@@ -339,7 +339,6 @@ class NFSe
     		v::validate($this->rpsList[0]->std);
 
 			$response = $tools->validarLoteRps($this->rpsList);
-
 
     	} catch (\Exception $e) {
     		return json_encode(['err' => 1, 'msg' => $e->getMessage()]);
